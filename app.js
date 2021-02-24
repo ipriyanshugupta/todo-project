@@ -133,6 +133,7 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-app.listen(80, function() {
-  console.log("Server started on port 80");
+const port  =process.env.PORT || 80
+app.listen(port, function() {
+  console.log("Server started on port: "+ port);
 });
